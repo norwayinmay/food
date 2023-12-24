@@ -1,6 +1,14 @@
 [
-  { "name": "Chuck Norris", "power": "Infinity" },
-  { "name": "Bruce Lee", "power": 9000 },
-  { "name": "Jackie Chan", "power": 7000 },
-  { "name": "Jet Li", "power": 8000 }
+  {
+    "name": "Bean & meatballs pasta",
+    "portions": "4-6",
+    "time (min)": 60,
+    "link": "https://github.com/norwayinmay/food/blob/main/savoury/bean-meatball-pasta.pdf"
+  },
+  {
+    "name": "Butternut squash & lentils",
+    "portions": "2+",
+    "time (min)": 45,
+    "link": "https://github.com/norwayinmay/food/blob/main/savoury/butternut-lentils.pdf"
+  }
 ]
