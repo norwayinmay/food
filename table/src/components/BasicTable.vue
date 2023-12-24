@@ -60,7 +60,10 @@ function capitalize(str) {
     <tbody>
       <tr v-for="entry in filteredData" :key="entry">
         <td v-for="col in columns" :key="col">
-          {{ entry[col] }}
+          <div v-if="col === 'name'">
+            <a :href="entry['link']">{{ entry['name'] }}</a>
+          </div>
+          <div v-else>{{ entry[col] }}</div>
         </td>
       </tr>
     </tbody>
