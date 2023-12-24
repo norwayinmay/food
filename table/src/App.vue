@@ -4,7 +4,8 @@ import BasicTable from './components/BasicTable.vue'
 import { ref } from 'vue'
 
 const searchQuery = ref('')
-const gridColumns = Object.keys(data[0])
+let gridColumns = Object.keys(data[0])
+gridColumns = gridColumns.filter((item) => item !== 'link')
 const gridData = data
 </script>
 
