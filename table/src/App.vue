@@ -4,7 +4,7 @@ import BasicTable from './components/BasicTable.vue'
 import { ref } from 'vue'
 
 const searchQuery = ref('')
-const gridColumns = ['name', 'power']
+const gridColumns = Object.keys(data[0])
 const gridData = data
 </script>
 
