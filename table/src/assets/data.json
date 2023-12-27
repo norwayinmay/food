@@ -10,5 +10,27 @@
     "portions": "2+",
     "time": 45,
     "link": "https://github.com/norwayinmay/food/blob/main/savoury/butternut-lentils.pdf"
+  },
+  {
+    "name": "Cajun chicken breast",
+    "portions": "4 (2x2)",
+    "time": 35,
+    "link": "https://github.com/norwayinmay/food/blob/main/savoury/cajun-chicken-breast.pdf"
+  },
+  {
+    "name": "Carrot and harissa rice",
+    "portions": "3",
+    "time": 75,
+    "link": "https://github.com/norwayinmay/food/blob/main/savoury/carrot-harissa-rice.pdf"
+  }, {
+    "name": "Chicken & chickpea curry",
+    "portions": "6",
+    "time": 150,
+    "link": "https://github.com/norwayinmay/food/blob/main/savoury/chicken-chickpea-curry.pdf"
+  }, {
+    "name": "Spinach & chickpea curry",
+    "portions": "5",
+    "time": 90,
+    "link": "https://github.com/norwayinmay/food/blob/main/savoury/chickpea-spinach-curry.pdf"
   }
 ]
