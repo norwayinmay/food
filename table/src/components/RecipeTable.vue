@@ -68,7 +68,7 @@ function toggleColSort(col) {
     <tbody>
       <tr v-for="recipe in filteredData" :key="recipe">
         <td v-for="col in columnHeaders" :key="col.dataField">
-          <div v-if="col.displayName === 'name'">
+          <div v-if="col.dataField === 'name'">
             <a :href="recipe['link']">{{ recipe['name'] }}</a>
           </div>
           <div v-else>{{ recipe[col.dataField] }}</div>
