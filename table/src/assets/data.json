@@ -2,13 +2,13 @@
   {
     "name": "Bean & meatballs pasta",
     "portions": "4-6",
-    "time (min)": 60,
+    "time": 60,
     "link": "https://github.com/norwayinmay/food/blob/main/savoury/bean-meatball-pasta.pdf"
   },
   {
     "name": "Butternut squash & lentils",
     "portions": "2+",
-    "time (min)": 45,
+    "time": 45,
     "link": "https://github.com/norwayinmay/food/blob/main/savoury/butternut-lentils.pdf"
   }
 ]
