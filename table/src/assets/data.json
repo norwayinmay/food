@@ -3,25 +3,29 @@
     "name": "Bean & meatballs pasta",
     "portions": "4-6",
     "time": 60,
-    "link": "https://github.com/norwayinmay/food/blob/main/savoury/bean-meatball-pasta.pdf"
+    "link": "https://github.com/norwayinmay/food/blob/main/savoury/bean-meatball-pasta.pdf",
+    "diet": ["GF"]
   },
   {
     "name": "Butternut squash & lentils",
     "portions": "2+",
     "time": 45,
-    "link": "https://github.com/norwayinmay/food/blob/main/savoury/butternut-lentils.pdf"
+    "link": "https://github.com/norwayinmay/food/blob/main/savoury/butternut-lentils.pdf",
+    "diet": ["GF", "VG", "V"]
   },
   {
     "name": "Cajun chicken breast",
     "portions": "4 (2x2)",
     "time": 35,
-    "link": "https://github.com/norwayinmay/food/blob/main/savoury/cajun-chicken-breast.pdf"
+    "link": "https://github.com/norwayinmay/food/blob/main/savoury/cajun-chicken-breast.pdf",
+    "diet": ["GF"]
   },
   {
     "name": "Carrot and harissa rice",
     "portions": "3",
     "time": 75,
-    "link": "https://github.com/norwayinmay/food/blob/main/savoury/carrot-harissa-rice.pdf"
+    "link": "https://github.com/norwayinmay/food/blob/main/savoury/carrot-harissa-rice.pdf",
+    "diet": ["GF", "VG", "V"]
   },
   {
     "name": "Chicken & chickpea curry",
@@ -33,7 +37,8 @@
     "name": "Spinach & chickpea curry",
     "portions": "5",
     "time": 90,
-    "link": "https://github.com/norwayinmay/food/blob/main/savoury/chickpea-spinach-curry.pdf"
+    "link": "https://github.com/norwayinmay/food/blob/main/savoury/chickpea-spinach-curry.pdf",
+    "diet": ["GF", "VG", "V"]
   },
   {
     "name": "Chilli Chicken sauce",
@@ -45,43 +50,50 @@
     "name": "Chilli con carne",
     "portions": "6-8",
     "time": 90,
-    "link": "https://github.com/norwayinmay/food/blob/main/savoury/chilli-con-carne.pdf"
+    "link": "https://github.com/norwayinmay/food/blob/main/savoury/chilli-con-carne.pdf",
+    "diet": ["GF"]
   },
   {
     "name": "Chorizo pasta sauce",
     "portions": "4",
     "time": 25,
-    "link": "https://github.com/norwayinmay/food/blob/main/savoury/chorizo-pasta.pdf"
+    "link": "https://github.com/norwayinmay/food/blob/main/savoury/chorizo-pasta.pdf",
+    "diet": ["GF"]
   },
   {
     "name": "Cottage pie",
     "portions": "6",
     "time": 105,
-    "link": "https://github.com/norwayinmay/food/blob/main/savoury/cottage-pie.pdf"
+    "link": "https://github.com/norwayinmay/food/blob/main/savoury/cottage-pie.pdf",
+    "diet": ["GF", "VG", "V"]
   },
   {
     "name": "Eggy thing",
     "portions": "2",
     "time": 20,
-    "link": "https://github.com/norwayinmay/food/blob/main/savoury/eggy-thing.pdf"
+    "link": "https://github.com/norwayinmay/food/blob/main/savoury/eggy-thing.pdf",
+    "diet": ["GF"]
   },
   {
     "name": "Fried rice",
     "portions": "3-4",
     "time": 30,
-    "link": "https://github.com/norwayinmay/food/blob/main/savoury/fried-rice.pdf"
+    "link": "https://github.com/norwayinmay/food/blob/main/savoury/fried-rice.pdf",
+    "diet": ["GF", "VG", "V"]
   },
   {
     "name": "Lemongrass & ginger salmon",
     "portions": "1-2",
     "time": 20,
-    "link": "https://github.com/norwayinmay/food/blob/main/savoury/ginger-salmon.pdf"
+    "link": "https://github.com/norwayinmay/food/blob/main/savoury/ginger-salmon.pdf",
+    "diet": ["GF"]
   },
   {
     "name": "Harissa pasta sauce",
     "portions": "5",
     "time": 30,
-    "link": "https://github.com/norwayinmay/food/blob/main/savoury/harissa-pasta-sauce.pdf"
+    "link": "https://github.com/norwayinmay/food/blob/main/savoury/harissa-pasta-sauce.pdf",
+    "diet": ["GF", "VG", "V"]
   },
   {
     "name": "Lincolnshire sausages",
@@ -93,7 +105,8 @@
     "name": "Masala chicken",
     "portions": "6",
     "time": 75,
-    "link": "https://github.com/norwayinmay/food/blob/main/savoury/masala-chicken.pdf"
+    "link": "https://github.com/norwayinmay/food/blob/main/savoury/masala-chicken.pdf",
+    "diet": ["GF"]
   },
   {
     "name": "Pork & ginger meatballs soup",
@@ -105,19 +118,22 @@
     "name": "Moussaka-style mince",
     "portions": "8",
     "time": 75,
-    "link": "https://github.com/norwayinmay/food/blob/main/savoury/moussaka-mince.pdf"
+    "link": "https://github.com/norwayinmay/food/blob/main/savoury/moussaka-mince.pdf",
+    "diet": ["GF"]
   },
   {
     "name": "Chicken pasander",
     "portions": "4",
     "time": 50,
-    "link": "https://github.com/norwayinmay/food/blob/main/savoury/pasander.pdf"
+    "link": "https://github.com/norwayinmay/food/blob/main/savoury/pasander.pdf",
+    "diet": ["GF"]
   },
   {
     "name": "Red chicken pot",
     "portions": "4",
     "time": 105,
-    "link": "https://github.com/norwayinmay/food/blob/main/savoury/red-chicken.pdf"
+    "link": "https://github.com/norwayinmay/food/blob/main/savoury/red-chicken.pdf",
+    "diet": ["GF"]
   },
   {
     "name": "Roti canai",
@@ -129,7 +145,8 @@
     "name": "Sausage casserole",
     "portions": "8",
     "time": 180,
-    "link": "https://github.com/norwayinmay/food/blob/main/savoury/sausage-casserole.pdf"
+    "link": "https://github.com/norwayinmay/food/blob/main/savoury/sausage-casserole.pdf",
+    "diet": ["GF", "VG"]
   },
   {
     "name": "Spaghetti bolognese",
@@ -141,31 +158,36 @@
     "name": "Stir fry",
     "portions": "2",
     "time": 30,
-    "link": "https://github.com/norwayinmay/food/blob/main/savoury/stir-fry.pdf"
+    "link": "https://github.com/norwayinmay/food/blob/main/savoury/stir-fry.pdf",
+    "diet": ["V", "VG", "GF"]
   },
   {
     "name": "Sweet & sour sausages",
     "portions": "9",
     "time": 90,
-    "link": "https://github.com/norwayinmay/food/blob/main/savoury/sweet-and-sour.pdf"
+    "link": "https://github.com/norwayinmay/food/blob/main/savoury/sweet-and-sour.pdf",
+    "diet": ["GF", "VG"]
   },
   {
     "name": "Sweetcorn fritters",
     "portions": "3-4 (10 fritters)",
     "time": 20,
-    "link": "https://github.com/norwayinmay/food/blob/main/savoury/sweetcorn-fritters.pdf"
+    "link": "https://github.com/norwayinmay/food/blob/main/savoury/sweetcorn-fritters.pdf",
+    "diet": ["VG", "V"]
   },
   {
     "name": "Tomato pesto tarts",
     "portions": "2",
     "time": 45,
-    "link": "https://github.com/norwayinmay/food/blob/main/savoury/tomato-pesto-tarts.pdf"
+    "link": "https://github.com/norwayinmay/food/blob/main/savoury/tomato-pesto-tarts.pdf",
+    "diet": ["V"]
   },
   {
     "name": "Veggie pasta sauce",
     "portions": "7",
     "time": 50,
-    "link": "https://github.com/norwayinmay/food/blob/main/savoury/veg-pasta-sauce.pdf"
+    "link": "https://github.com/norwayinmay/food/blob/main/savoury/veg-pasta-sauce.pdf",
+    "diet": ["V"]
   },
   {
     "name": "Wonton",
@@ -177,48 +199,56 @@
     "name": "Yorkshire pudding",
     "portions": "2-3",
     "time": 40,
-    "link": "https://github.com/norwayinmay/food/blob/main/savoury/yorkshire-pudding.pdf"
+    "link": "https://github.com/norwayinmay/food/blob/main/savoury/yorkshire-pudding.pdf",
+    "diet": ["V"]
   },
   {
     "name": "Chocolate cheesecake",
     "portions": "4",
     "time": 60,
-    "link": "https://github.com/norwayinmay/food/blob/main/sweet/chocolate-cheesecake.pdf"
+    "link": "https://github.com/norwayinmay/food/blob/main/sweet/chocolate-cheesecake.pdf",
+    "diet": ["V"]
   },
   {
     "name": "Chocolate concrete",
     "portions": "6",
     "time": 35,
-    "link": "https://github.com/norwayinmay/food/blob/main/sweet/chocolate-concrete.pdf"
+    "link": "https://github.com/norwayinmay/food/blob/main/sweet/chocolate-concrete.pdf",
+    "diet": ["V"]
   },
   {
     "name": "Chocolate cupcakes",
     "portions": "6",
     "time": 35,
-    "link": "https://github.com/norwayinmay/food/blob/main/sweet/chocolate-cupcakes.pdf"
+    "link": "https://github.com/norwayinmay/food/blob/main/sweet/chocolate-cupcakes.pdf",
+    "diet": ["V"]
   },
   {
     "name": "Coconut macaroons",
     "portions": "6",
     "time": 35,
-    "link": "https://github.com/norwayinmay/food/blob/main/sweet/coconut-macaroons.pdf"
+    "link": "https://github.com/norwayinmay/food/blob/main/sweet/coconut-macaroons.pdf",
+    "diet": ["V", "GF"]
   },
   {
     "name": "Apple crumble",
     "portions": "5-6",
     "time": 75,
-    "link": "https://github.com/norwayinmay/food/blob/main/sweet/crumble.pdf"
+    "link": "https://github.com/norwayinmay/food/blob/main/sweet/crumble.pdf",
+    "diet": ["V"]
   },
   {
     "name": "Gateau breton",
     "portions": "6-8",
     "time": 60,
-    "link": "https://github.com/norwayinmay/food/blob/main/sweet/gateau-breton.pdf"
+    "link": "https://github.com/norwayinmay/food/blob/main/sweet/gateau-breton.pdf",
+    "diet": ["V"]
   },
   {
     "name": "Marmalade ice cream",
     "portions": "2-4",
     "time": 225,
-    "link": "https://github.com/norwayinmay/food/blob/main/sweet/marmalade-ice-cream.pdf"
+    "link": "https://github.com/norwayinmay/food/blob/main/sweet/marmalade-ice-cream.pdf",
+    "diet": ["V", "GF"]
   }
 ]

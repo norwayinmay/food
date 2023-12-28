@@ -6,8 +6,12 @@ function ColumnHeader(dataField, displayName) {
   this.displayName = displayName
 }
 
+const NAME_FIELD = 'name'
+const LINK_FIELD = 'link'
+const DIET_FIELD = 'diet'
+
 const columnHeaders = [
-  new ColumnHeader('name', 'Name'),
+  new ColumnHeader(NAME_FIELD, 'Name'),
   new ColumnHeader('portions', 'Portions'),
   new ColumnHeader('time', 'Time (min)'),
   new ColumnHeader('fibre', 'Fibre (g/portion)')
@@ -15,14 +19,25 @@ const columnHeaders = [
 
 const props = defineProps({
   data: Array,
-  searchQuery: String
+  searchQuery: String,
+  dietaryRequirements: Array
 })
 
 const sortCol = ref(new ColumnHeader('', ''))
 const sortOrders = ref(columnHeaders.reduce((o, key) => ((o[key] = 1), o), {}))
 
 const filteredData = computed(() => {
-  let { data, searchQuery } = props
+  let { data, searchQuery, dietaryRequirements } = props
+
+  if (dietaryRequirements.length > 0) {
+    data = data.filter((row) => {
+      if (row[DIET_FIELD]) {
+        return dietaryRequirements.every((dr) => row[DIET_FIELD].indexOf(dr) > -1)
+      }
+      return false
+    })
+  }
+
   if (searchQuery) {
     searchQuery = searchQuery.toLowerCase()
     data = data.filter((row) => {
@@ -68,8 +83,8 @@ function toggleColSort(col) {
     <tbody>
       <tr v-for="recipe in filteredData" :key="recipe">
         <td v-for="col in columnHeaders" :key="col.dataField">
-          <div v-if="col.dataField === 'name'">
-            <a :href="recipe['link']">{{ recipe['name'] }}</a>
+          <div v-if="col.dataField === NAME_FIELD">
+            <a :href="recipe[LINK_FIELD]">{{ recipe[NAME_FIELD] }}</a>
           </div>
           <div v-else>{{ recipe[col.dataField] }}</div>
         </td>
