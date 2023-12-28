@@ -26,8 +26,8 @@ export function matchAnyField(data, searchQuery) {
 }
 
 export function sortByColumn(data, sortOrders, sortColumn) {
-  console.log(sortColumn)
-  const order = sortOrders.value[sortColumn]
+  const order = sortOrders[sortColumn.dataField]
+
   return data.slice().sort((rowA, rowB) => {
     let a = normaliseValueForSort(rowA, sortColumn)
     let b = normaliseValueForSort(rowB, sortColumn)

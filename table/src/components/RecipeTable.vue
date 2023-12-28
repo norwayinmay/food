@@ -21,8 +21,18 @@ const props = defineProps({
   dietaryRequirements: Array
 })
 
+const SORT_ASC = 1
 const sortColumn = ref(new ColumnHeader('', ''))
-const sortOrders = ref(columnHeaders.reduce((o, key) => ((o[key] = 1), o), {}))
+const sortOrders = ref(
+  columnHeaders
+    .map((col) => col.dataField)
+    .reduce(
+      (initialSortOrders, dataField) => (
+        (initialSortOrders[dataField] = SORT_ASC), initialSortOrders
+      ),
+      {}
+    )
+)
 
 const filteredData = computed(() => {
   let { data, searchQuery, dietaryRequirements } = props
@@ -36,14 +46,15 @@ const filteredData = computed(() => {
   }
 
   if (sortColumn.value) {
-    data = dataProcessing.sortByColumn(data, sortOrders, sortColumn.value)
+    data = dataProcessing.sortByColumn(data, sortOrders.value, sortColumn.value)
   }
+
   return data
 })
 
 function toggleColumnSort(col) {
   sortColumn.value = col
-  sortOrders.value[col] *= -1
+  sortOrders.value[col.dataField] *= -1
 }
 </script>
 
@@ -58,7 +69,8 @@ function toggleColumnSort(col) {
           :class="{ active: sortColumn == col }"
         >
           {{ col.displayName }}
-          <span class="arrow" :class="sortOrders[col] > 0 ? 'asc' : 'dsc'"> </span>
+          <span class="arrow" :class="sortOrders[col.dataField] === SORT_ASC ? 'asc' : 'dsc'">
+          </span>
         </th>
       </tr>
     </thead>
