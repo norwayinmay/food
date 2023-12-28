@@ -11,7 +11,8 @@
     "portions": "2+",
     "time": 45,
     "link": "https://github.com/norwayinmay/food/blob/main/savoury/butternut-lentils.pdf",
-    "diet": ["GF", "VG", "V"]
+    "diet": ["GF", "VG", "V"],
+    "fibre": 23
   },
   {
     "name": "Cajun chicken breast",
@@ -31,27 +32,31 @@
     "name": "Chicken & chickpea curry",
     "portions": "6",
     "time": 150,
-    "link": "https://github.com/norwayinmay/food/blob/main/savoury/chicken-chickpea-curry.pdf"
+    "link": "https://github.com/norwayinmay/food/blob/main/savoury/chicken-chickpea-curry.pdf",
+    "fibre": 7.5
   },
   {
     "name": "Spinach & chickpea curry",
     "portions": "5",
     "time": 90,
     "link": "https://github.com/norwayinmay/food/blob/main/savoury/chickpea-spinach-curry.pdf",
-    "diet": ["GF", "VG", "V"]
+    "diet": ["GF", "VG", "V"],
+    "fibre": 13
   },
   {
-    "name": "Chilli Chicken sauce",
+    "name": "Chilli chicken sauce",
     "portions": "6",
     "time": 90,
-    "link": "https://github.com/norwayinmay/food/blob/main/savoury/chilli-chicken.pdf"
+    "link": "https://github.com/norwayinmay/food/blob/main/savoury/chilli-chicken.pdf",
+    "fibre": 12.5
   },
   {
     "name": "Chilli con carne",
     "portions": "6-8",
     "time": 90,
     "link": "https://github.com/norwayinmay/food/blob/main/savoury/chilli-con-carne.pdf",
-    "diet": ["GF"]
+    "diet": ["GF"],
+    "fibre": 9
   },
   {
     "name": "Chorizo pasta sauce",
@@ -79,7 +84,8 @@
     "portions": "3-4",
     "time": 30,
     "link": "https://github.com/norwayinmay/food/blob/main/savoury/fried-rice.pdf",
-    "diet": ["GF", "VG", "V"]
+    "diet": ["GF", "VG", "V"],
+    "fibre": 7.5
   },
   {
     "name": "Lemongrass & ginger salmon",
@@ -93,7 +99,8 @@
     "portions": "5",
     "time": 30,
     "link": "https://github.com/norwayinmay/food/blob/main/savoury/harissa-pasta-sauce.pdf",
-    "diet": ["GF", "VG", "V"]
+    "diet": ["GF", "VG", "V"],
+    "fibre": 10.6
   },
   {
     "name": "Lincolnshire sausages",
@@ -166,7 +173,8 @@
     "portions": "9",
     "time": 90,
     "link": "https://github.com/norwayinmay/food/blob/main/savoury/sweet-and-sour.pdf",
-    "diet": ["GF", "VG"]
+    "diet": ["GF", "VG"],
+    "fibre": 6.3
   },
   {
     "name": "Sweetcorn fritters",
@@ -187,7 +195,8 @@
     "portions": "7",
     "time": 50,
     "link": "https://github.com/norwayinmay/food/blob/main/savoury/veg-pasta-sauce.pdf",
-    "diet": ["V"]
+    "diet": ["V"],
+    "fibre": 8
   },
   {
     "name": "Wonton",
@@ -228,14 +237,16 @@
     "portions": "6",
     "time": 35,
     "link": "https://github.com/norwayinmay/food/blob/main/sweet/coconut-macaroons.pdf",
-    "diet": ["V", "GF"]
+    "diet": ["V", "GF"],
+    "fibre": 3
   },
   {
     "name": "Apple crumble",
     "portions": "5-6",
     "time": 75,
     "link": "https://github.com/norwayinmay/food/blob/main/sweet/crumble.pdf",
-    "diet": ["V"]
+    "diet": ["V"],
+    "fibre": 5.3
   },
   {
     "name": "Gateau breton",
