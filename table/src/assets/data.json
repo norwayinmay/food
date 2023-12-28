@@ -178,5 +178,47 @@
     "portions": "2-3",
     "time": 40,
     "link": "https://github.com/norwayinmay/food/blob/main/savoury/yorkshire-pudding.pdf"
+  },
+  {
+    "name": "Chocolate cheesecake",
+    "portions": "4",
+    "time": 60,
+    "link": "https://github.com/norwayinmay/food/blob/main/sweet/chocolate-cheesecake.pdf"
+  },
+  {
+    "name": "Chocolate concrete",
+    "portions": "6",
+    "time": 35,
+    "link": "https://github.com/norwayinmay/food/blob/main/sweet/chocolate-concrete.pdf"
+  },
+  {
+    "name": "Chocolate cupcakes",
+    "portions": "6",
+    "time": 35,
+    "link": "https://github.com/norwayinmay/food/blob/main/sweet/chocolate-cupcakes.pdf"
+  },
+  {
+    "name": "Coconut macaroons",
+    "portions": "6",
+    "time": 35,
+    "link": "https://github.com/norwayinmay/food/blob/main/sweet/coconut-macaroons.pdf"
+  },
+  {
+    "name": "Apple crumble",
+    "portions": "5-6",
+    "time": 75,
+    "link": "https://github.com/norwayinmay/food/blob/main/sweet/crumble.pdf"
+  },
+  {
+    "name": "Gateau breton",
+    "portions": "6-8",
+    "time": 60,
+    "link": "https://github.com/norwayinmay/food/blob/main/sweet/gateau-breton.pdf"
+  },
+  {
+    "name": "Marmalade ice cream",
+    "portions": "2-4",
+    "time": 225,
+    "link": "https://github.com/norwayinmay/food/blob/main/sweet/marmalade-ice-cream.pdf"
   }
 ]
