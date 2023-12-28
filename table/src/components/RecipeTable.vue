@@ -1,20 +1,18 @@
 <script setup>
 import { ref, computed } from 'vue'
+import * as dataProcessing from '@/dataProcessing'
 
-function ColumnHeader(dataField, displayName) {
+function ColumnHeader(dataField, displayName, sortType) {
   this.dataField = dataField
   this.displayName = displayName
+  this.sortType = sortType
 }
 
-const NAME_FIELD = 'name'
-const LINK_FIELD = 'link'
-const DIET_FIELD = 'diet'
-
 const columnHeaders = [
-  new ColumnHeader(NAME_FIELD, 'Name'),
-  new ColumnHeader('portions', 'Portions'),
-  new ColumnHeader('time', 'Time (min)'),
-  new ColumnHeader('fibre', 'Fibre (g/portion)')
+  new ColumnHeader(dataProcessing.NAME_FIELD, 'Name', dataProcessing.SortType.TEXT),
+  new ColumnHeader('portions', 'Portions', dataProcessing.SortType.TEXT),
+  new ColumnHeader('time', 'Time (min)', dataProcessing.SortType.NUMBER),
+  new ColumnHeader('fibre', 'Fibre (g/portion)', dataProcessing.SortType.NUMBER)
 ]
 
 const props = defineProps({
@@ -23,44 +21,28 @@ const props = defineProps({
   dietaryRequirements: Array
 })
 
-const sortCol = ref(new ColumnHeader('', ''))
+const sortColumn = ref(new ColumnHeader('', ''))
 const sortOrders = ref(columnHeaders.reduce((o, key) => ((o[key] = 1), o), {}))
 
 const filteredData = computed(() => {
   let { data, searchQuery, dietaryRequirements } = props
 
   if (dietaryRequirements.length > 0) {
-    data = data.filter((row) => {
-      if (row[DIET_FIELD]) {
-        return dietaryRequirements.every((dr) => row[DIET_FIELD].indexOf(dr) > -1)
-      }
-      return false
-    })
+    data = dataProcessing.matchesDiet(data, dietaryRequirements)
   }
 
   if (searchQuery) {
-    searchQuery = searchQuery.toLowerCase()
-    data = data.filter((row) => {
-      return Object.keys(row).some((dataField) => {
-        return String(row[dataField]).toLowerCase().indexOf(searchQuery) > -1
-      })
-    })
+    data = dataProcessing.matchAnyField(data, searchQuery)
   }
 
-  const sortColumn = sortCol.value
-  if (sortColumn) {
-    const order = sortOrders.value[sortColumn]
-    data = data.slice().sort((a, b) => {
-      a = a[sortColumn.dataField]
-      b = b[sortColumn.dataField]
-      return (a === b ? 0 : a > b ? 1 : -1) * order
-    })
+  if (sortColumn.value) {
+    data = dataProcessing.sortByColumn(data, sortOrders, sortColumn.value)
   }
   return data
 })
 
-function toggleColSort(col) {
-  sortCol.value = col
+function toggleColumnSort(col) {
+  sortColumn.value = col
   sortOrders.value[col] *= -1
 }
 </script>
@@ -72,8 +54,8 @@ function toggleColSort(col) {
         <th
           v-for="col in columnHeaders"
           :key="col.dataField"
-          @click="toggleColSort(col)"
-          :class="{ active: sortCol == col }"
+          @click="toggleColumnSort(col)"
+          :class="{ active: sortColumn == col }"
         >
           {{ col.displayName }}
           <span class="arrow" :class="sortOrders[col] > 0 ? 'asc' : 'dsc'"> </span>
@@ -83,8 +65,8 @@ function toggleColSort(col) {
     <tbody>
       <tr v-for="recipe in filteredData" :key="recipe">
         <td v-for="col in columnHeaders" :key="col.dataField">
-          <div v-if="col.dataField === NAME_FIELD">
-            <a :href="recipe[LINK_FIELD]">{{ recipe[NAME_FIELD] }}</a>
+          <div v-if="col.dataField === dataProcessing.NAME_FIELD">
+            <a :href="recipe[dataProcessing.LINK_FIELD]">{{ recipe[dataProcessing.NAME_FIELD] }}</a>
           </div>
           <div v-else>{{ recipe[col.dataField] }}</div>
         </td>
