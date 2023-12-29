@@ -1,16 +1,14 @@
-export const NAME_FIELD = 'name'
-export const LINK_FIELD = 'link'
-export const DIET_FIELD = 'diet'
+
 
 export const SortType = Object.freeze({
   TEXT: Symbol('text-sort'),
   NUMBER: Symbol('number-sort')
 })
 
-export function matchesDiet(data, dietaryRequirements) {
+export function matchesListField(data, listField, requiredMatches) {
   return data.filter((row) => {
-    if (row[DIET_FIELD]) {
-      return dietaryRequirements.every((dr) => row[DIET_FIELD].indexOf(dr) > -1)
+    if (row[listField]) {
+      return requiredMatches.every((dr) => row[listField].indexOf(dr) > -1)
     }
     return false
   })
