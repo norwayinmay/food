@@ -16,7 +16,7 @@ export function matchesDiet(data, dietaryRequirements) {
   })
 }
 
-export function matchAnyField(data, searchQuery) {
+export function matchesAnyField(data, searchQuery) {
   const query = searchQuery.toLowerCase()
   return data.filter((row) => {
     return Object.keys(row).some((dataField) => {

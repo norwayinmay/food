@@ -8,12 +8,24 @@ function ColumnHeader(dataField, displayName, sortType) {
   this.sortType = sortType
 }
 
-const columnHeaders = [
+const DEFAULT_COLUMN_HEADERS = [
   new ColumnHeader(dataProcessing.NAME_FIELD, 'Name', dataProcessing.SortType.TEXT),
   new ColumnHeader('portions', 'Portions', dataProcessing.SortType.TEXT),
   new ColumnHeader('time', 'Time (min)', dataProcessing.SortType.NUMBER),
   new ColumnHeader('fibre', 'Fibre (g/portion)', dataProcessing.SortType.NUMBER)
 ]
+
+const ALL_COLUMN_HEADERS = [
+  ...DEFAULT_COLUMN_HEADERS,
+  new ColumnHeader('protein', 'Protein (g/portion)', dataProcessing.SortType.NUMBER),
+  new ColumnHeader('diet', 'Dietary requirements', dataProcessing.SortType.TEXT),
+  new ColumnHeader('keywords', 'Keywords', dataProcessing.SortType.TEXT)
+]
+
+const allColumns = ref(false)
+const columnHeaders = computed(() => {
+  return allColumns.value ? ALL_COLUMN_HEADERS : DEFAULT_COLUMN_HEADERS
+})
 
 const props = defineProps({
   data: Array,
@@ -24,14 +36,12 @@ const props = defineProps({
 const SORT_ASC = 1
 const sortColumn = ref(new ColumnHeader('', ''))
 const sortOrders = ref(
-  columnHeaders
-    .map((col) => col.dataField)
-    .reduce(
-      (initialSortOrders, dataField) => (
-        (initialSortOrders[dataField] = SORT_ASC), initialSortOrders
-      ),
-      {}
-    )
+  ALL_COLUMN_HEADERS.map((col) => col.dataField).reduce(
+    (initialSortOrders, dataField) => (
+      (initialSortOrders[dataField] = SORT_ASC), initialSortOrders
+    ),
+    {}
+  )
 )
 
 const filteredData = computed(() => {
@@ -42,7 +52,7 @@ const filteredData = computed(() => {
   }
 
   if (searchQuery) {
-    data = dataProcessing.matchAnyField(data, searchQuery)
+    data = dataProcessing.matchesAnyField(data, searchQuery)
   }
 
   if (sortColumn.value) {
@@ -59,6 +69,9 @@ function toggleColumnSort(col) {
 </script>
 
 <template>
+  <input type="checkbox" id="allCols" v-model="allColumns" />
+  <label for="allCols">Show all columns</label>
+
   <table v-if="filteredData.length">
     <thead>
       <tr>

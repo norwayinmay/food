@@ -4,7 +4,8 @@
     "portions": "4-6",
     "time": 60,
     "link": "https://github.com/norwayinmay/food/blob/main/savoury/bean-meatball-pasta.pdf",
-    "diet": ["GF"]
+    "diet": ["GF"],
+    "keywords": ["tomato"]
   },
   {
     "name": "Butternut squash & lentils",
@@ -48,7 +49,8 @@
     "portions": "6",
     "time": 90,
     "link": "https://github.com/norwayinmay/food/blob/main/savoury/chilli-chicken.pdf",
-    "fibre": 12.5
+    "fibre": 12.5,
+    "keywords": ["tomato"]
   },
   {
     "name": "Chilli con carne",
@@ -56,14 +58,16 @@
     "time": 90,
     "link": "https://github.com/norwayinmay/food/blob/main/savoury/chilli-con-carne.pdf",
     "diet": ["GF"],
-    "fibre": 9
+    "fibre": 9,
+    "keywords": ["tomato"]
   },
   {
     "name": "Chorizo pasta sauce",
     "portions": "4",
     "time": 25,
     "link": "https://github.com/norwayinmay/food/blob/main/savoury/chorizo-pasta.pdf",
-    "diet": ["GF"]
+    "diet": ["GF"],
+    "keywords": ["tomato"]
   },
   {
     "name": "Cottage pie",
@@ -100,7 +104,8 @@
     "time": 30,
     "link": "https://github.com/norwayinmay/food/blob/main/savoury/harissa-pasta-sauce.pdf",
     "diet": ["GF", "VG", "V"],
-    "fibre": 10.6
+    "fibre": 10.6,
+    "keywords": ["tomato"]
   },
   {
     "name": "Lincolnshire sausages",
@@ -140,7 +145,8 @@
     "portions": "4",
     "time": 105,
     "link": "https://github.com/norwayinmay/food/blob/main/savoury/red-chicken.pdf",
-    "diet": ["GF"]
+    "diet": ["GF"],
+    "keywords": ["tomato"]
   },
   {
     "name": "Roti canai",
@@ -159,7 +165,8 @@
     "name": "Spaghetti bolognese",
     "portions": "6",
     "time": 90,
-    "link": "https://github.com/norwayinmay/food/blob/main/savoury/spag-bol.pdf"
+    "link": "https://github.com/norwayinmay/food/blob/main/savoury/spag-bol.pdf",
+    "keywords": ["tomato"]
   },
   {
     "name": "Stir fry",
@@ -196,7 +203,8 @@
     "time": 50,
     "link": "https://github.com/norwayinmay/food/blob/main/savoury/veg-pasta-sauce.pdf",
     "diet": ["V"],
-    "fibre": 8
+    "fibre": 8,
+    "keywords": ["tomato"]
   },
   {
     "name": "Wonton",
