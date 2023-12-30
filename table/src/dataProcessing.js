@@ -1,5 +1,3 @@
-
-
 export const SortType = Object.freeze({
   TEXT: Symbol('text-sort'),
   NUMBER: Symbol('number-sort')

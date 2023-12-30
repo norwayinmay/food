@@ -269,5 +269,12 @@
     "time": 225,
     "link": "https://github.com/norwayinmay/food/blob/main/sweet/marmalade-ice-cream.pdf",
     "diet": ["V", "GF"]
+  },
+  {
+    "name": "Scones",
+    "portions": "2-4 (4 scones)",
+    "time": 30,
+    "link": "https://github.com/norwayinmay/food/blob/main/sweet/scones.pdf",
+    "diet": ["V"]
   }
 ]
