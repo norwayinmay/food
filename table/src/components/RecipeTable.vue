@@ -24,7 +24,7 @@ const DEFAULT_COLUMN_HEADERS = [
 const ALL_COLUMN_HEADERS = [
   ...DEFAULT_COLUMN_HEADERS,
   new ColumnHeader('protein', 'Protein (g/portion)', dataProcessing.SortType.NUMBER),
-  new ColumnHeader(DIET_FIELD, 'Dietary requirements', dataProcessing.SortType.TEXT),
+  new ColumnHeader(DIET_FIELD, 'Diet type', dataProcessing.SortType.TEXT),
   new ColumnHeader('keywords', 'Keywords', dataProcessing.SortType.TEXT)
 ]
 
@@ -36,7 +36,7 @@ const columnHeaders = computed(() => {
 const props = defineProps({
   data: Array,
   searchQuery: String,
-  dietaryRequirements: Array
+  dietTypes: Array
 })
 
 const SORT_ASC = 1
@@ -51,10 +51,10 @@ const sortOrders = ref(
 )
 
 const filteredData = computed(() => {
-  let { data, searchQuery, dietaryRequirements } = props
+  let { data, searchQuery, dietTypes } = props
 
-  if (dietaryRequirements.length > 0) {
-    data = dataProcessing.matchesListField(data, DIET_FIELD, dietaryRequirements)
+  if (dietTypes.length > 0) {
+    data = dataProcessing.matchesListField(data, DIET_FIELD, dietTypes)
   }
 
   if (searchQuery) {

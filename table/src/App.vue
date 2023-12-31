@@ -2,23 +2,25 @@
 import data from './assets/data.json'
 import RecipeTable from './components/RecipeTable.vue'
 import { ref } from 'vue'
+import {DIET_TYPES} from '@/dataProcessing'
 
 const searchQuery = ref('')
-const dietaryRequirements = ref([])
+const dietTypes = ref([])
+
 </script>
 
 <template>
-  <input type="checkbox" id="v" value="V" v-model="dietaryRequirements" />
-  <label for="v">Vegetarian</label>
-
-  <input type="checkbox" id="vg" value="VG" v-model="dietaryRequirements" />
-  <label for="vg">Vegan</label>
-
-  <input type="checkbox" id="gf" value="GF" v-model="dietaryRequirements" />
-  <label for="gf">Gluten-free (use GF stocks etc.)</label>
+  <div>Diet types</div>
+  <div>
+    <template v-for="dietType in DIET_TYPES" :key="dietType.id">
+      <div>
+        <input type="checkbox" :id=dietType.id :value=dietType.dataField v-model="dietTypes" />
+        <label :for=dietType.id>{{ dietType.displayName }}</label>
+      </div>
+    </template>
+  </div>
 
   <form id="search">Search <input name="query" v-model="searchQuery" /></form>
 
-  <RecipeTable :data="data" :search-query="searchQuery" :dietary-requirements="dietaryRequirements">
-  </RecipeTable>
+  <RecipeTable :data="data" :search-query="searchQuery" :diet-types="dietTypes"> </RecipeTable>
 </template>

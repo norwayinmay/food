@@ -1,9 +1,28 @@
+
+export class DietType {
+  constructor(id, displayName, dataField) {
+    this.id = id
+    this.displayName = displayName
+    this.dataField = dataField
+  }
+}
+
+export const DIET_TYPES = [
+  new DietType('v', 'Vegetarian', 'V'),
+  new DietType('vg', 'Vegan', 'VG'),
+  new DietType('gf', 'Gluten-free (use GF stocks etc.)', 'GF'),
+  new DietType('sweet', 'Sweet', 'sweet'),
+  new DietType('savoury', 'Savoury', 'savoury')
+]
+
 export const SortType = Object.freeze({
   TEXT: Symbol('text-sort'),
   NUMBER: Symbol('number-sort')
 })
 
 export function matchesListField(data, listField, requiredMatches) {
+console.log(requiredMatches)
+
   return data.filter((row) => {
     if (row[listField]) {
       return requiredMatches.every((dr) => row[listField].indexOf(dr) > -1)
