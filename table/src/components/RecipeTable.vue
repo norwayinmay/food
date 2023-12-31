@@ -1,6 +1,14 @@
 <script setup>
 import { ref, computed } from 'vue'
 import * as dataProcessing from '@/dataProcessing'
+import { useFiltersStore } from '@/stores/filters'
+
+const props = defineProps({
+  data: Array,
+  searchQuery: String
+})
+
+const filtersStore = useFiltersStore()
 
 class ColumnHeader {
   constructor(dataField, displayName, sortType) {
@@ -33,12 +41,6 @@ const columnHeaders = computed(() => {
   return allColumns.value ? ALL_COLUMN_HEADERS : DEFAULT_COLUMN_HEADERS
 })
 
-const props = defineProps({
-  data: Array,
-  searchQuery: String,
-  dietTypes: Array
-})
-
 const SORT_ASC = 1
 const sortColumn = ref(new ColumnHeader('', ''))
 const sortOrders = ref(
@@ -51,10 +53,10 @@ const sortOrders = ref(
 )
 
 const filteredData = computed(() => {
-  let { data, searchQuery, dietTypes } = props
+  let { data, searchQuery } = props
 
-  if (dietTypes.length > 0) {
-    data = dataProcessing.matchesListField(data, DIET_FIELD, dietTypes)
+  if (filtersStore.dietTypes.length > 0) {
+    data = dataProcessing.matchesListField(data, DIET_FIELD, filtersStore.dietTypes)
   }
 
   if (searchQuery) {
