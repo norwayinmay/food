@@ -22,17 +22,7 @@ export const FIBRE = new Field('fibre', FilterType.NUMBER)
 export const PROTEIN = new Field('protein', FilterType.NUMBER)
 export const KEYWORDS = new Field('keywords', FilterType.TEXT)
 
-export const ALL = [
-  NAME,
-  PORTIONS,
-  TIME,
-  LINK,
-  DIET,
-  FIBRE,
-  PROTEIN,
-  KEYWORDS
-]
-
+export const ALL = [NAME, PORTIONS, TIME, LINK, DIET, FIBRE, PROTEIN, KEYWORDS]
 
 export class DietType {
   constructor(id, displayName, dataValue) {

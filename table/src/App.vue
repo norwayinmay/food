@@ -1,11 +1,11 @@
 <script setup>
 import recipeData from './assets/recipeData.json'
 import RecipeTable from './components/RecipeTable.vue'
-import Filters from '@/components/Filters.vue'
+import RecipeFilters from '@/components/RecipeFilters.vue'
 </script>
 
 <template>
-  <Filters> </Filters>
+  <RecipeFilters> </RecipeFilters>
 
   <RecipeTable :recipe-data="recipeData"> </RecipeTable>
 </template>

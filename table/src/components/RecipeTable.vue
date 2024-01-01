@@ -71,9 +71,7 @@ const matchingRecipes = computed(() => {
       <tr v-for="recipe in matchingRecipes" :key="recipe">
         <td v-for="col in columns" :key="col.id">
           <div v-if="col.dataField === dataFields.NAME">
-            <a :href="recipe[dataFields.LINK.fieldName]">{{
-              recipe[dataFields.NAME.fieldName]
-            }}</a>
+            <a :href="recipe[dataFields.LINK.fieldName]">{{ recipe[dataFields.NAME.fieldName] }}</a>
           </div>
           <div v-else>{{ recipe[col.dataField.fieldName] }}</div>
         </td>

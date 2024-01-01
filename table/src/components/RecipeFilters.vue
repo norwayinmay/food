@@ -1,4 +1,3 @@
-<!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
 import { useFiltersStore } from '@/stores/filters'
 import { DIET_TYPES } from '@/dataFields'
