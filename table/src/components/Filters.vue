@@ -15,7 +15,7 @@ const filtersStore = useFiltersStore()
           type="checkbox"
           :id="dietType.id"
           :value="dietType.dataField"
-          v-model="filtersStore.dietTypes"
+          v-model="filtersStore.selectedDietTypes"
         />
         <label :for="dietType.id">{{ dietType.displayName }}</label>
       </div>

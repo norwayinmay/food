@@ -63,11 +63,7 @@ const filteredData = computed(() => {
           :class="{ active: sortColumn == col }"
         >
           {{ col.label }}
-          <span
-            class="arrow"
-            :class="filtersStore.allSortOrders[col.id]"
-          >
-          </span>
+          <span class="arrow" :class="filtersStore.columnSortOrders[col.id]"> </span>
         </th>
       </tr>
     </thead>

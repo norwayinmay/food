@@ -6,7 +6,7 @@ import * as dataUtils from '@/dataUtils'
 export const SORT_ASC = 'asc'
 export const SORT_DESC = 'dsc'
 
-function matchesListField(data, listField, requiredMatches) {
+function matchesArrayField(data, listField, requiredMatches) {
   return data.filter((row) => {
     if (row[listField.fieldName]) {
       return requiredMatches.every(
@@ -17,14 +17,22 @@ function matchesListField(data, listField, requiredMatches) {
   })
 }
 
-function matchesAnyField(data, searchQuery) {
+function matchesAnyFilterableField(data, searchQuery) {
   const query = searchQuery.toLowerCase()
   return data.filter((row) => {
-    return Object.keys(row).some((field) => {
-      console.log(String(row[field]).toLowerCase())
-      return String(row[field]).toLowerCase().indexOf(query) > -1
-    })
+    return Object.keys(row).some((fieldName) => fieldContainsQuery(row, fieldName, query))
   })
+}
+
+const unfilterableFields = dataUtils.ALL_FIELDS.filter(
+  (field) => field.filterType === dataUtils.FilterType.NONE
+).map((field) => field.fieldName)
+function fieldContainsQuery(row, fieldName, lowerCaseQuery) {
+  if (unfilterableFields.indexOf(fieldName) > -1) {
+    return false
+  }
+
+  return String(row[fieldName]).toLowerCase().indexOf(lowerCaseQuery) > -1
 }
 
 function sortByColumn(data, sortOrders, sortField) {
@@ -43,7 +51,7 @@ function sortByColumn(data, sortOrders, sortField) {
 
 function normaliseValueForSort(row, sortField) {
   let value = row[sortField.fieldName]
-  if (sortField.sortType === dataUtils.SortType.NUMBER) {
+  if (sortField.filterType === dataUtils.FilterType.NUMBER) {
     if (!value) {
       value = 0
     }
@@ -53,12 +61,12 @@ function normaliseValueForSort(row, sortField) {
 }
 
 export const useFiltersStore = defineStore('filters', () => {
-  const dietTypes = ref([])
+  const selectedDietTypes = ref([])
   const searchQuery = ref('')
-  const allSortOrders = ref([])
+  const columnSortOrders = ref([])
 
   function initialiseSortOrders(columns) {
-    allSortOrders.value = columns
+    columnSortOrders.value = columns
       .map((col) => col.id)
       .reduce(
         (initialSortOrders, colId) => ((initialSortOrders[colId] = SORT_ASC), initialSortOrders),
@@ -67,32 +75,32 @@ export const useFiltersStore = defineStore('filters', () => {
   }
 
   function toggleSortOrder(column) {
-    const existingOrder = allSortOrders.value[column.id]
-    allSortOrders.value[column.id] = existingOrder === SORT_ASC ? SORT_DESC : SORT_ASC
+    const existingOrder = columnSortOrders.value[column.id]
+    columnSortOrders.value[column.id] = existingOrder === SORT_ASC ? SORT_DESC : SORT_ASC
   }
 
   function filterData(originalData, sortField) {
     let data = originalData.slice()
 
-    if (this.dietTypes.length > 0) {
-      data = matchesListField(data, dataUtils.DIET_FIELD, dietTypes.value)
+    if (this.selectedDietTypes.length > 0) {
+      data = matchesArrayField(data, dataUtils.DIET_FIELD, selectedDietTypes.value)
     }
 
     if (this.searchQuery) {
-      data = matchesAnyField(data, searchQuery.value)
+      data = matchesAnyFilterableField(data, searchQuery.value)
     }
 
-    if (sortField && sortField.sortType !== dataUtils.SortType.NONE) {
-      data = sortByColumn(data, allSortOrders.value, sortField)
+    if (sortField && sortField.filterType !== dataUtils.FilterType.NONE) {
+      data = sortByColumn(data, columnSortOrders.value, sortField)
     }
 
     return data
   }
 
   return {
-    dietTypes,
+    selectedDietTypes,
     searchQuery,
-    allSortOrders,
+    columnSortOrders,
     initialiseSortOrders,
     toggleSortOrder,
     filterData
