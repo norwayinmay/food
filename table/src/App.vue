@@ -1,5 +1,5 @@
 <script setup>
-import data from './assets/data.json'
+import recipeData from './assets/recipeData.json'
 import RecipeTable from './components/RecipeTable.vue'
 import Filters from '@/components/Filters.vue'
 </script>
@@ -7,5 +7,5 @@ import Filters from '@/components/Filters.vue'
 <template>
   <Filters> </Filters>
 
-  <RecipeTable :data="data"> </RecipeTable>
+  <RecipeTable :recipe-data="recipeData"> </RecipeTable>
 </template>

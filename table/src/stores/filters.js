@@ -1,6 +1,6 @@
 import { ref } from 'vue'
 import { defineStore } from 'pinia'
-import * as dataUtils from '@/dataUtils'
+import * as dataFields from '@/dataFields'
 
 // These constants match the classes used in styling column sort indicators.
 export const SORT_ASC = 'asc'
@@ -24,8 +24,8 @@ function matchesAnyFilterableField(data, searchQuery) {
   })
 }
 
-const unfilterableFields = dataUtils.ALL_FIELDS.filter(
-  (field) => field.filterType === dataUtils.FilterType.NONE
+const unfilterableFields = dataFields.ALL.filter(
+  (field) => field.filterType === dataFields.FilterType.NONE
 ).map((field) => field.fieldName)
 function fieldContainsQuery(row, fieldName, lowerCaseQuery) {
   if (unfilterableFields.indexOf(fieldName) > -1) {
@@ -51,7 +51,7 @@ function sortByColumn(data, sortOrders, sortField) {
 
 function normaliseValueForSort(row, sortField) {
   let value = row[sortField.fieldName]
-  if (sortField.filterType === dataUtils.FilterType.NUMBER) {
+  if (sortField.filterType === dataFields.FilterType.NUMBER) {
     if (!value) {
       value = 0
     }
@@ -83,14 +83,14 @@ export const useFiltersStore = defineStore('filters', () => {
     let data = originalData.slice()
 
     if (this.selectedDietTypes.length > 0) {
-      data = matchesArrayField(data, dataUtils.DIET_FIELD, selectedDietTypes.value)
+      data = matchesArrayField(data, dataFields.DIET, selectedDietTypes.value)
     }
 
     if (this.searchQuery) {
       data = matchesAnyFilterableField(data, searchQuery.value)
     }
 
-    if (sortField && sortField.filterType !== dataUtils.FilterType.NONE) {
+    if (sortField && sortField.filterType !== dataFields.FilterType.NONE) {
       data = sortByColumn(data, columnSortOrders.value, sortField)
     }
 

@@ -1,12 +1,12 @@
 <script setup>
 import { ref, computed } from 'vue'
-import * as dataUtils from '@/dataUtils'
+import * as dataFields from '@/dataFields'
 import { useFiltersStore } from '@/stores/filters'
 
 const filtersStore = useFiltersStore()
 
 const props = defineProps({
-  data: Array
+  recipeData: Array
 })
 
 class Column {
@@ -18,17 +18,17 @@ class Column {
 }
 
 const DEFAULT_COLUMNS = [
-  new Column(dataUtils.NAME_FIELD, 'Name'),
-  new Column(dataUtils.PORTIONS_FIELD, 'Portions'),
-  new Column(dataUtils.TIME_FIELD, 'Time (min)'),
-  new Column(dataUtils.FIBRE_FIELD, 'Fibre (g/portion)')
+  new Column(dataFields.NAME, 'Name'),
+  new Column(dataFields.PORTIONS, 'Portions'),
+  new Column(dataFields.TIME, 'Time (min)'),
+  new Column(dataFields.FIBRE, 'Fibre (g/portion)')
 ]
 
 const ALL_COLUMNS = [
   ...DEFAULT_COLUMNS,
-  new Column(dataUtils.PROTEIN_FIELD, 'Protein (g/portion)'),
-  new Column(dataUtils.DIET_FIELD, 'Diet type'),
-  new Column(dataUtils.KEYWORDS_FIELD, 'Keywords')
+  new Column(dataFields.PROTEIN, 'Protein (g/portion)'),
+  new Column(dataFields.DIET, 'Diet type'),
+  new Column(dataFields.KEYWORDS, 'Keywords')
 ]
 
 const showAllColumns = ref(false)
@@ -44,8 +44,8 @@ function toggleColumnSort(col) {
   filtersStore.toggleSortOrder(col)
 }
 
-const filteredData = computed(() => {
-  return filtersStore.filterData(props.data, sortColumn.value.dataField)
+const matchingRecipes = computed(() => {
+  return filtersStore.filterData(props.recipeData, sortColumn.value.dataField)
 })
 </script>
 
@@ -53,7 +53,7 @@ const filteredData = computed(() => {
   <input type="checkbox" id="allCols" v-model="showAllColumns" />
   <label for="allCols">Show all columns</label>
 
-  <table v-if="filteredData.length">
+  <table v-if="matchingRecipes.length">
     <thead>
       <tr>
         <th
@@ -68,11 +68,11 @@ const filteredData = computed(() => {
       </tr>
     </thead>
     <tbody>
-      <tr v-for="recipe in filteredData" :key="recipe">
+      <tr v-for="recipe in matchingRecipes" :key="recipe">
         <td v-for="col in columns" :key="col.id">
-          <div v-if="col.dataField === dataUtils.NAME_FIELD">
-            <a :href="recipe[dataUtils.LINK_FIELD.fieldName]">{{
-              recipe[dataUtils.NAME_FIELD.fieldName]
+          <div v-if="col.dataField === dataFields.NAME">
+            <a :href="recipe[dataFields.LINK.fieldName]">{{
+              recipe[dataFields.NAME.fieldName]
             }}</a>
           </div>
           <div v-else>{{ recipe[col.dataField.fieldName] }}</div>

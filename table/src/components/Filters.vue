@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
 import { useFiltersStore } from '@/stores/filters'
-import { DIET_TYPES } from '@/dataUtils'
+import { DIET_TYPES } from '@/dataFields'
 
 const filtersStore = useFiltersStore()
 </script>
@@ -14,7 +14,7 @@ const filtersStore = useFiltersStore()
         <input
           type="checkbox"
           :id="dietType.id"
-          :value="dietType.dataField"
+          :value="dietType.dataValue"
           v-model="filtersStore.selectedDietTypes"
         />
         <label :for="dietType.id">{{ dietType.displayName }}</label>
