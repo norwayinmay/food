@@ -51,12 +51,19 @@ function sortByColumn(data, sortOrders, sortField) {
 
 function normaliseValueForSort(row, sortField) {
   let value = row[sortField.fieldName]
-  if (sortField.filterType === dataFields.FilterType.NUMBER) {
-    if (!value) {
-      value = 0
-    }
+  if (value) {
+    // no normalisation applied to populated values
+    return value
   }
 
+  if (sortField.filterType === dataFields.FilterType.NUMBER) {
+    return 0
+  }
+  if (sortField.filterType === dataFields.FilterType.ARRAY) {
+    return []
+  }
+
+  // no normalisation applied to other types
   return value
 }
 

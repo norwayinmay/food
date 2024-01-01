@@ -3,6 +3,7 @@
 export const FilterType = Object.freeze({
   TEXT: Symbol('text-sort'),
   NUMBER: Symbol('number-sort'),
+  ARRAY: Symbol('array-sort'),
   NONE: Symbol('no-sort')
 })
 
@@ -17,10 +18,10 @@ export const NAME = new Field('name', FilterType.TEXT)
 export const PORTIONS = new Field('portions', FilterType.TEXT)
 export const TIME = new Field('time', FilterType.NUMBER)
 export const LINK = new Field('link', FilterType.NONE)
-export const DIET = new Field('diet', FilterType.TEXT)
+export const DIET = new Field('diet', FilterType.ARRAY)
 export const FIBRE = new Field('fibre', FilterType.NUMBER)
 export const PROTEIN = new Field('protein', FilterType.NUMBER)
-export const KEYWORDS = new Field('keywords', FilterType.TEXT)
+export const KEYWORDS = new Field('keywords', FilterType.ARRAY)
 
 export const ALL = [NAME, PORTIONS, TIME, LINK, DIET, FIBRE, PROTEIN, KEYWORDS]
 
