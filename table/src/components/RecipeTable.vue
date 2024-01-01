@@ -1,6 +1,6 @@
 <script setup>
 import { ref, computed } from 'vue'
-import * as dataProcessing from '@/dataProcessing'
+import * as dataUtils from '@/dataUtils'
 import { useFiltersStore } from '@/stores/filters'
 
 const filtersStore = useFiltersStore()
@@ -9,80 +9,77 @@ const props = defineProps({
   data: Array
 })
 
-class ColumnHeader {
-  constructor(dataField, displayName, sortType) {
+class Column {
+  constructor(dataField, label) {
+    this.id = dataField.fieldName
     this.dataField = dataField
-    this.displayName = displayName
-    this.sortType = sortType
+    this.label = label
   }
 }
 
-const DEFAULT_COLUMN_HEADERS = [
-  new ColumnHeader(dataProcessing.NAME_FIELD, 'Name', dataProcessing.SortType.TEXT),
-  new ColumnHeader('portions', 'Portions', dataProcessing.SortType.TEXT),
-  new ColumnHeader('time', 'Time (min)', dataProcessing.SortType.NUMBER),
-  new ColumnHeader('fibre', 'Fibre (g/portion)', dataProcessing.SortType.NUMBER)
+const DEFAULT_COLUMNS = [
+  new Column(dataUtils.NAME_FIELD, 'Name'),
+  new Column(dataUtils.PORTIONS_FIELD, 'Portions'),
+  new Column(dataUtils.TIME_FIELD, 'Time (min)'),
+  new Column(dataUtils.FIBRE_FIELD, 'Fibre (g/portion)')
 ]
 
-const ALL_COLUMN_HEADERS = [
-  ...DEFAULT_COLUMN_HEADERS,
-  new ColumnHeader('protein', 'Protein (g/portion)', dataProcessing.SortType.NUMBER),
-  new ColumnHeader(dataProcessing.DIET_FIELD, 'Diet type', dataProcessing.SortType.TEXT),
-  new ColumnHeader('keywords', 'Keywords', dataProcessing.SortType.TEXT)
+const ALL_COLUMNS = [
+  ...DEFAULT_COLUMNS,
+  new Column(dataUtils.PROTEIN_FIELD, 'Protein (g/portion)'),
+  new Column(dataUtils.DIET_FIELD, 'Diet type'),
+  new Column(dataUtils.KEYWORDS_FIELD, 'Keywords')
 ]
 
-const allColumns = ref(false)
-const columnHeaders = computed(() => {
-  return allColumns.value ? ALL_COLUMN_HEADERS : DEFAULT_COLUMN_HEADERS
+const showAllColumns = ref(false)
+const columns = computed(() => {
+  return showAllColumns.value ? ALL_COLUMNS : DEFAULT_COLUMNS
 })
 
-const SORT_ASC = 1
-const sortColumn = ref(new ColumnHeader('', ''))
-const sortOrders = ref(
-  ALL_COLUMN_HEADERS.map((col) => col.dataField).reduce(
-    (initialSortOrders, dataField) => (
-      (initialSortOrders[dataField] = SORT_ASC), initialSortOrders
-    ),
-    {}
-  )
-)
-
-const filteredData = computed(() => {
-  return filtersStore.filterData(props.data, sortOrders.value, sortColumn.value)
-})
+const sortColumn = ref(new Column('', ''))
+filtersStore.initialiseSortOrders(ALL_COLUMNS)
 
 function toggleColumnSort(col) {
   sortColumn.value = col
-  sortOrders.value[col.dataField] *= -1
+  filtersStore.toggleSortOrder(col)
 }
+
+const filteredData = computed(() => {
+  return filtersStore.filterData(props.data, sortColumn.value.dataField)
+})
 </script>
 
 <template>
-  <input type="checkbox" id="allCols" v-model="allColumns" />
+  <input type="checkbox" id="allCols" v-model="showAllColumns" />
   <label for="allCols">Show all columns</label>
 
   <table v-if="filteredData.length">
     <thead>
       <tr>
         <th
-          v-for="col in columnHeaders"
-          :key="col.dataField"
+          v-for="col in columns"
+          :key="col.id"
           @click="toggleColumnSort(col)"
           :class="{ active: sortColumn == col }"
         >
-          {{ col.displayName }}
-          <span class="arrow" :class="sortOrders[col.dataField] === SORT_ASC ? 'asc' : 'dsc'">
+          {{ col.label }}
+          <span
+            class="arrow"
+            :class="filtersStore.allSortOrders[col.id]"
+          >
           </span>
         </th>
       </tr>
     </thead>
     <tbody>
       <tr v-for="recipe in filteredData" :key="recipe">
-        <td v-for="col in columnHeaders" :key="col.dataField">
-          <div v-if="col.dataField === dataProcessing.NAME_FIELD">
-            <a :href="recipe[dataProcessing.LINK_FIELD]">{{ recipe[dataProcessing.NAME_FIELD] }}</a>
+        <td v-for="col in columns" :key="col.id">
+          <div v-if="col.dataField === dataUtils.NAME_FIELD">
+            <a :href="recipe[dataUtils.LINK_FIELD.fieldName]">{{
+              recipe[dataUtils.NAME_FIELD.fieldName]
+            }}</a>
           </div>
-          <div v-else>{{ recipe[col.dataField] }}</div>
+          <div v-else>{{ recipe[col.dataField.fieldName] }}</div>
         </td>
       </tr>
     </tbody>
