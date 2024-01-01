@@ -3,6 +3,26 @@ export const SortType = Object.freeze({
   NUMBER: Symbol('number-sort')
 })
 
+export class DietType {
+  constructor(id, displayName, dataField) {
+    this.id = id
+    this.displayName = displayName
+    this.dataField = dataField
+  }
+}
+
+export const DIET_TYPES = [
+  new DietType('v', 'Vegetarian', 'V'),
+  new DietType('vg', 'Vegan', 'VG'),
+  new DietType('gf', 'Gluten-free (use GF stocks etc.)', 'GF'),
+  new DietType('sweet', 'Sweet', 'sweet'),
+  new DietType('savoury', 'Savoury', 'savoury')
+]
+
+export const NAME_FIELD = 'name'
+export const LINK_FIELD = 'link'
+export const DIET_FIELD = 'diet'
+
 export function matchesListField(data, listField, requiredMatches) {
   return data.filter((row) => {
     if (row[listField]) {

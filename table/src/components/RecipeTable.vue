@@ -3,12 +3,11 @@ import { ref, computed } from 'vue'
 import * as dataProcessing from '@/dataProcessing'
 import { useFiltersStore } from '@/stores/filters'
 
-const props = defineProps({
-  data: Array,
-  searchQuery: String
-})
-
 const filtersStore = useFiltersStore()
+
+const props = defineProps({
+  data: Array
+})
 
 class ColumnHeader {
   constructor(dataField, displayName, sortType) {
@@ -18,12 +17,8 @@ class ColumnHeader {
   }
 }
 
-const NAME_FIELD = 'name'
-const LINK_FIELD = 'link'
-const DIET_FIELD = 'diet'
-
 const DEFAULT_COLUMN_HEADERS = [
-  new ColumnHeader(NAME_FIELD, 'Name', dataProcessing.SortType.TEXT),
+  new ColumnHeader(dataProcessing.NAME_FIELD, 'Name', dataProcessing.SortType.TEXT),
   new ColumnHeader('portions', 'Portions', dataProcessing.SortType.TEXT),
   new ColumnHeader('time', 'Time (min)', dataProcessing.SortType.NUMBER),
   new ColumnHeader('fibre', 'Fibre (g/portion)', dataProcessing.SortType.NUMBER)
@@ -32,7 +27,7 @@ const DEFAULT_COLUMN_HEADERS = [
 const ALL_COLUMN_HEADERS = [
   ...DEFAULT_COLUMN_HEADERS,
   new ColumnHeader('protein', 'Protein (g/portion)', dataProcessing.SortType.NUMBER),
-  new ColumnHeader(DIET_FIELD, 'Diet type', dataProcessing.SortType.TEXT),
+  new ColumnHeader(dataProcessing.DIET_FIELD, 'Diet type', dataProcessing.SortType.TEXT),
   new ColumnHeader('keywords', 'Keywords', dataProcessing.SortType.TEXT)
 ]
 
@@ -53,21 +48,7 @@ const sortOrders = ref(
 )
 
 const filteredData = computed(() => {
-  let { data, searchQuery } = props
-
-  if (filtersStore.dietTypes.length > 0) {
-    data = dataProcessing.matchesListField(data, DIET_FIELD, filtersStore.dietTypes)
-  }
-
-  if (searchQuery) {
-    data = dataProcessing.matchesAnyField(data, searchQuery)
-  }
-
-  if (sortColumn.value) {
-    data = dataProcessing.sortByColumn(data, sortOrders.value, sortColumn.value)
-  }
-
-  return data
+  return filtersStore.filterData(props.data, sortOrders.value, sortColumn.value)
 })
 
 function toggleColumnSort(col) {
@@ -98,8 +79,8 @@ function toggleColumnSort(col) {
     <tbody>
       <tr v-for="recipe in filteredData" :key="recipe">
         <td v-for="col in columnHeaders" :key="col.dataField">
-          <div v-if="col.dataField === NAME_FIELD">
-            <a :href="recipe[LINK_FIELD]">{{ recipe[NAME_FIELD] }}</a>
+          <div v-if="col.dataField === dataProcessing.NAME_FIELD">
+            <a :href="recipe[dataProcessing.LINK_FIELD]">{{ recipe[dataProcessing.NAME_FIELD] }}</a>
           </div>
           <div v-else>{{ recipe[col.dataField] }}</div>
         </td>

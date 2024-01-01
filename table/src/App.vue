@@ -1,16 +1,11 @@
 <script setup>
 import data from './assets/data.json'
 import RecipeTable from './components/RecipeTable.vue'
-import DietTypes from '@/components/DietTypes.vue'
-import { ref } from 'vue'
-
-const searchQuery = ref('')
+import Filters from '@/components/Filters.vue'
 </script>
 
 <template>
-  <DietTypes> </DietTypes>
+  <Filters> </Filters>
 
-  <form id="search">Search <input name="query" v-model="searchQuery" /></form>
-
-  <RecipeTable :data="data" :search-query="searchQuery"> </RecipeTable>
+  <RecipeTable :data="data"> </RecipeTable>
 </template>

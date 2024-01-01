@@ -1,23 +1,9 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
 import { useFiltersStore } from '@/stores/filters'
+import { DIET_TYPES } from '@/dataProcessing'
 
 const filtersStore = useFiltersStore()
-
-class DietType {
-  constructor(id, displayName, dataField) {
-    this.id = id
-    this.displayName = displayName
-    this.dataField = dataField
-  }
-}
-
-const DIET_TYPES = [
-  new DietType('v', 'Vegetarian', 'V'),
-  new DietType('vg', 'Vegan', 'VG'),
-  new DietType('gf', 'Gluten-free (use GF stocks etc.)', 'GF'),
-  new DietType('sweet', 'Sweet', 'sweet'),
-  new DietType('savoury', 'Savoury', 'savoury')
-]
 </script>
 
 <template>
@@ -35,4 +21,6 @@ const DIET_TYPES = [
       </div>
     </template>
   </div>
+
+  <form id="search">Search <input name="query" v-model="filtersStore.searchQuery" /></form>
 </template>
