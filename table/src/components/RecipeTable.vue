@@ -50,10 +50,23 @@ const matchingRecipes = computed(() => {
 </script>
 
 <template>
-  <input type="checkbox" id="allCols" v-model="showAllColumns" />
-  <label for="allCols">Show all columns</label>
+  <div
+    class="flex items-center ps-4 border w-72 bg-yellow-200 bg-opacity-100 rounded border-gray-200 rounded dark:border-gray-700"
+  >
+    <input
+      class="w-6 h-6 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+      type="checkbox"
+      id="allCols"
+      v-model="showAllColumns"
+    />
+    <label
+      class="w-full py-4 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+      for="allCols"
+      >Show all columns</label
+    >
+  </div>
 
-  <table v-if="matchingRecipes.length">
+  <table v-if="matchingRecipes.length" class="table-fixed">
     <thead>
       <tr>
         <th
