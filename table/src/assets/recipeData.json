@@ -23,6 +23,14 @@
     "diet": ["GF", "savoury"]
   },
   {
+    "name": "Cajun chicken & chickpeas",
+    "portions": "4",
+    "time": 30,
+    "link": "https://github.com/norwayinmay/food/blob/main/savoury/cajun-chicken-and-chickpeas.pdf",
+    "diet": ["GF", "savoury"],
+    "keywords": ["tomato"]
+  },
+  {
     "name": "Carrot & harissa rice",
     "portions": "3",
     "time": 75,
@@ -195,6 +203,14 @@
     "time": 20,
     "link": "https://github.com/norwayinmay/food/blob/main/savoury/sweetcorn-fritters.pdf",
     "diet": ["VG", "V", "savoury"]
+  },
+  {
+    "name": "Tomato & green bean sauce",
+    "portions": "2",
+    "time": 20,
+    "link": "https://github.com/norwayinmay/food/blob/main/savoury/tomato-and-green-bean-sauce.pdf",
+    "diet": ["V", "VG", "savoury"],
+    "keywords": ["tomato"]
   },
   {
     "name": "Tomato pesto tarts",
