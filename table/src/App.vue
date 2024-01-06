@@ -9,3 +9,10 @@ import RecipeFilters from '@/components/RecipeFilters.vue'
 
   <RecipeTable :recipe-data="recipeData"> </RecipeTable>
 </template>
+<style>
+
+div {
+  font-family: "ChunkFive";
+}
+
+</style>
