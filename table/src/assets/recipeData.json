@@ -150,7 +150,17 @@
     "portions": "8",
     "time": 45,
     "link": "https://github.com/norwayinmay/food/blob/main/savoury/meatballs-soup.pdf",
-    "diet": ["savoury"]
+    "diet": ["savoury"],
+    "keywords": ["soup"]
+  },{
+    "name": "Potato soup",
+    "portions": "4",
+    "time": 50,
+    "link": "https://github.com/norwayinmay/food/blob/main/savoury/potato-soup.pdf",
+    "diet": ["savoury"],
+    "fibre": 9,
+    "protein": 6,
+    "keywords": ["soup"]
   },
   {
     "name": "Moussaka-style mince",
