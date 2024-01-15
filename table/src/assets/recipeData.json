@@ -28,7 +28,7 @@
     "time": 30,
     "link": "https://github.com/norwayinmay/food/blob/main/savoury/cajun-chicken-and-chickpeas.pdf",
     "diet": ["GF", "savoury"],
-    "keywords": ["tomato"]
+    "keywords": ["tomato", "sauce"]
   },
   {
     "name": "Carrot & harissa rice",
@@ -43,7 +43,8 @@
     "time": 150,
     "link": "https://github.com/norwayinmay/food/blob/main/savoury/chicken-chickpea-curry.pdf",
     "diet": ["savoury"],
-    "fibre": 7.5
+    "fibre": 7.5,
+    "keywords": ["curry"]
   },
   {
     "name": "Spinach & chickpea curry",
@@ -51,7 +52,8 @@
     "time": 90,
     "link": "https://github.com/norwayinmay/food/blob/main/savoury/chickpea-spinach-curry.pdf",
     "diet": ["GF", "VG", "V", "savoury"],
-    "fibre": 13
+    "fibre": 13,
+    "keywords": ["curry"]
   },
   {
     "name": "Chilli chicken sauce",
@@ -60,7 +62,7 @@
     "link": "https://github.com/norwayinmay/food/blob/main/savoury/chilli-chicken.pdf",
     "diet": ["savoury"],
     "fibre": 12.5,
-    "keywords": ["tomato"]
+    "keywords": ["tomato", "sauce"]
   },
   {
     "name": "Chilli con carne",
@@ -77,7 +79,7 @@
     "time": 25,
     "link": "https://github.com/norwayinmay/food/blob/main/savoury/chorizo-pasta.pdf",
     "diet": ["GF", "savoury"],
-    "keywords": ["tomato"]
+    "keywords": ["tomato", "sauce"]
   },
   {
     "name": "Cottage pie",
@@ -115,7 +117,7 @@
     "link": "https://github.com/norwayinmay/food/blob/main/savoury/harissa-pasta-sauce.pdf",
     "diet": ["GF", "VG", "V", "savoury"],
     "fibre": 10.6,
-    "keywords": ["tomato"]
+    "keywords": ["tomato", "sauce"]
   },
   {
     "name": "Lincolnshire sausages",
@@ -159,7 +161,8 @@
     "portions": "4",
     "time": 50,
     "link": "https://github.com/norwayinmay/food/blob/main/savoury/pasander.pdf",
-    "diet": ["GF", "savoury"]
+    "diet": ["GF", "savoury"],
+    "keywords": ["curry"]
   },
   {
     "name": "Red chicken pot",
@@ -167,14 +170,15 @@
     "time": 105,
     "link": "https://github.com/norwayinmay/food/blob/main/savoury/red-chicken.pdf",
     "diet": ["GF", "savoury"],
-    "keywords": ["tomato"]
+    "keywords": ["tomato", "sauce"]
   },
   {
     "name": "Roti canai",
     "portions": "5-6",
     "time": 120,
     "link": "https://github.com/norwayinmay/food/blob/main/savoury/roti-canai.pdf",
-    "diet": ["savoury"]
+    "diet": ["savoury"],
+    "keywords": ["curry"]
   },
   {
     "name": "Sausage casserole",
@@ -189,7 +193,7 @@
     "time": 90,
     "link": "https://github.com/norwayinmay/food/blob/main/savoury/spag-bol.pdf",
     "diet": ["savoury"],
-    "keywords": ["tomato"]
+    "keywords": ["tomato", "sauce"]
   },
   {
     "name": "Stir fry",
@@ -204,7 +208,8 @@
     "time": 90,
     "link": "https://github.com/norwayinmay/food/blob/main/savoury/sweet-and-sour.pdf",
     "diet": ["GF", "VG", "savoury"],
-    "fibre": 6.3
+    "fibre": 6.3,
+    "keywords": ["sauce"]
   },
   {
     "name": "Sweetcorn fritters",
@@ -219,7 +224,7 @@
     "time": 20,
     "link": "https://github.com/norwayinmay/food/blob/main/savoury/tomato-and-green-bean-sauce.pdf",
     "diet": ["V", "VG", "savoury"],
-    "keywords": ["tomato"]
+    "keywords": ["tomato", "sauce"]
   },
   {
     "name": "Tomato pesto tarts",
@@ -235,7 +240,7 @@
     "link": "https://github.com/norwayinmay/food/blob/main/savoury/veg-pasta-sauce.pdf",
     "diet": ["V", "savoury"],
     "fibre": 8,
-    "keywords": ["tomato"]
+    "keywords": ["tomato", "sauce"]
   },
   {
     "name": "Wonton",
