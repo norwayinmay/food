@@ -28,6 +28,7 @@
     "time": 30,
     "link": "https://github.com/norwayinmay/food/blob/main/savoury/cajun-chicken-and-chickpeas.pdf",
     "diet": ["GF", "savoury"],
+    "fibre": 6.2,
     "keywords": ["tomato", "sauce"]
   },
   {
@@ -101,7 +102,8 @@
     "time": 30,
     "link": "https://github.com/norwayinmay/food/blob/main/savoury/fried-rice.pdf",
     "diet": ["GF", "VG", "V", "savoury"],
-    "fibre": 7.5
+    "fibre": 7.5,
+    "protein": 15.2
   },
   {
     "name": "Lemongrass & ginger salmon",
@@ -140,6 +142,7 @@
     "link": "https://github.com/norwayinmay/food/blob/main/savoury/masala-curry.pdf",
     "diet": ["GF", "savoury"],
     "fibre": 7.7,
+    "protein": 29,
     "keywords": ["curry"]
   },
   {
