@@ -3,10 +3,34 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "ChunkFive";
+  font-family: 'ChunkFive';
   font-style: normal;
   font-weight: 900;
   font-display: auto;
   unicode-range: U+000-5FF;
-  src: local("ChunkFive"), url(./fonts/ChunkFive/ChunkFive-Regular.woff2) format("woff2");
+  src:
+    local('ChunkFive'),
+    url(./fonts/ChunkFive/ChunkFive-Regular.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Orbitron';
+  font-style: normal;
+  font-weight: 400;
+  font-display: auto;
+  unicode-range: U+000-5FF;
+  src:
+    local('Orbitron'),
+    url(./fonts/Orbitron/Orbitron-Regular.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Fanwood';
+  font-style: normal;
+  font-weight: 400;
+  font-display: auto;
+  unicode-range: U+000-5FF;
+  src:
+    local('Fanwood'),
+    url(./fonts/Fanwood/Fanwood-Regular.woff) format('woff');
 }

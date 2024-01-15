@@ -60,7 +60,7 @@ const matchingRecipes = computed(() => {
       v-model="showAllColumns"
     />
     <label
-      class="w-full py-4 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+      class="all-columns w-full py-4 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
       for="allCols"
       >Show all columns</label
     >
@@ -95,6 +95,10 @@ const matchingRecipes = computed(() => {
 </template>
 
 <style>
+.all-columns {
+  font-family: Orbitron;
+}
+
 table {
   border: 2px solid #42b983;
   border-radius: 3px;
@@ -103,6 +107,7 @@ table {
 
 th {
   background-color: #42b983;
+  font-family: 'Orbitron';
   color: rgba(255, 255, 255, 0.66);
   cursor: pointer;
   user-select: none;
