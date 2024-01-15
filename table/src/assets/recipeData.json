@@ -132,6 +132,15 @@
     "diet": ["GF", "savoury"]
   },
   {
+    "name": "Masala curry",
+    "portions": "4",
+    "time": 90,
+    "link": "https://github.com/norwayinmay/food/blob/main/savoury/masala-curry.pdf",
+    "diet": ["GF", "savoury"],
+    "fibre": 7.7,
+    "keywords": ["curry"]
+  },
+  {
     "name": "Pork & ginger meatballs soup",
     "portions": "8",
     "time": 45,
