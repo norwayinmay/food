@@ -157,7 +157,7 @@
     "portions": "4",
     "time": 50,
     "link": "https://github.com/norwayinmay/food/blob/main/savoury/potato-soup.pdf",
-    "diet": ["savoury"],
+    "diet": ["V", "GF", "savoury"],
     "fibre": 9,
     "protein": 6,
     "keywords": ["soup"]
@@ -176,6 +176,13 @@
     "link": "https://github.com/norwayinmay/food/blob/main/savoury/pasander.pdf",
     "diet": ["GF", "savoury"],
     "keywords": ["curry"]
+  },
+  {
+    "name": "Ras el hanout chicken",
+    "portions": "2",
+    "time": 35,
+    "link": "https://github.com/norwayinmay/food/blob/main/savoury/ras-el-hanout-chicken.pdf",
+    "diet": ["GF", "savoury"]
   },
   {
     "name": "Red chicken pot",
