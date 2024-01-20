@@ -54,7 +54,7 @@
     "link": "https://github.com/norwayinmay/food/blob/main/savoury/chickpea-spinach-curry.pdf",
     "diet": ["GF", "VG", "V", "savoury"],
     "fibre": 13,
-    "keywords": ["curry"]
+    "keywords": ["curry", "cupboard"]
   },
   {
     "name": "Chilli chicken sauce",
@@ -103,7 +103,8 @@
     "link": "https://github.com/norwayinmay/food/blob/main/savoury/fried-rice.pdf",
     "diet": ["GF", "VG", "V", "savoury"],
     "fibre": 7.5,
-    "protein": 15.2
+    "protein": 15.2,
+    "keywords": ["cupboard"]
   },
   {
     "name": "Lemongrass & ginger salmon",
@@ -255,7 +256,7 @@
     "time": 20,
     "link": "https://github.com/norwayinmay/food/blob/main/savoury/tomato-and-green-bean-sauce.pdf",
     "diet": ["V", "VG", "savoury"],
-    "keywords": ["tomato", "sauce"]
+    "keywords": ["tomato", "sauce", "cupboard"]
   },
   {
     "name": "Tomato pesto tarts",
