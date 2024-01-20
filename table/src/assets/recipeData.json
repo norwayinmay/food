@@ -115,11 +115,21 @@
   {
     "name": "Harissa pasta sauce",
     "portions": "5",
-    "time": 30,
+    "time": 35,
     "link": "https://github.com/norwayinmay/food/blob/main/savoury/harissa-pasta-sauce.pdf",
     "diet": ["GF", "VG", "V", "savoury"],
     "fibre": 10.6,
     "keywords": ["tomato", "sauce"]
+  },
+  {
+    "name": "Harissa bean sauce",
+    "portions": "4",
+    "time": 30,
+    "link": "https://github.com/norwayinmay/food/blob/main/savoury/harissa-bean-sauce.pdf",
+    "diet": ["GF", "VG", "V", "savoury"],
+    "fibre": 13.3,
+    "protein": 13.7,
+    "keywords": ["tomato", "sauce", "cupboard"]
   },
   {
     "name": "Lincolnshire sausages",
@@ -152,7 +162,8 @@
     "link": "https://github.com/norwayinmay/food/blob/main/savoury/meatballs-soup.pdf",
     "diet": ["savoury"],
     "keywords": ["soup"]
-  },{
+  },
+  {
     "name": "Potato soup",
     "portions": "4",
     "time": 50,
