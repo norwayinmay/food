@@ -346,5 +346,12 @@
     "time": 30,
     "link": "https://github.com/norwayinmay/food/blob/main/sweet/scones.pdf",
     "diet": ["V", "sweet"]
+  },
+  {
+    "name": "Tiffin",
+    "portions": "12-18 slices",
+    "time": 150,
+    "link": "https://github.com/norwayinmay/food/blob/main/sweet/tiffin.pdf",
+    "diet": ["V", "sweet"]
   }
 ]
