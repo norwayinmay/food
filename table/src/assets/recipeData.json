@@ -349,9 +349,10 @@
   },
   {
     "name": "Tiffin",
-    "portions": "12-18 slices",
+    "portions": "12 slices",
     "time": 150,
     "link": "https://github.com/norwayinmay/food/blob/main/sweet/tiffin.pdf",
-    "diet": ["V", "sweet"]
+    "diet": ["V", "sweet"],
+    "fibre": 4.5
   }
 ]
