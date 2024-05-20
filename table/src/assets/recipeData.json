@@ -214,6 +214,13 @@
     "keywords": ["tomato", "sauce"]
   },
   {
+    "name": "Pesto chicken pasta",
+    "portions": "2",
+    "time": 35,
+    "link": "https://github.com/norwayinmay/food/blob/main/savoury/pesto-chicken-pasta.pdf",
+    "diet": ["savoury"]
+  },
+  {
     "name": "Roti canai",
     "portions": "5-6",
     "time": 120,
