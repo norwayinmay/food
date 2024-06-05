@@ -283,11 +283,12 @@
   },
   {
     "name": "Veggie pasta sauce",
-    "portions": "7",
+    "portions": "6",
     "time": 50,
     "link": "https://github.com/norwayinmay/food/blob/main/savoury/veg-pasta-sauce.pdf",
     "diet": ["V", "savoury"],
-    "fibre": 8,
+    "fibre": 9,
+    "protein": 16.2,
     "keywords": ["tomato", "sauce"]
   },
   {
