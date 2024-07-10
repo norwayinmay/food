@@ -86,7 +86,7 @@
   {
     "name": "Cottage pie",
     "portions": "6",
-    "time": 105,
+    "time": 90,
     "link": "https://github.com/norwayinmay/food/blob/main/savoury/cottage-pie.pdf",
     "diet": ["GF", "VG", "V", "savoury"]
   },
