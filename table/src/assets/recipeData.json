@@ -370,5 +370,12 @@
     "link": "https://github.com/norwayinmay/food/blob/main/sweet/tiffin.pdf",
     "diet": ["V", "sweet"],
     "fibre": 4.5
+  },
+  {
+    "name": "Crunchy ginger biscuits",
+    "portions": "12 biscuits",
+    "time": 25,
+    "link": "https://github.com/norwayinmay/food/blob/main/sweet/crunchy-ginger-biscuits.pdf",
+    "diet": ["V", "sweet"]
   }
 ]
