@@ -379,6 +379,13 @@
     "fibre": 4.5
   },
   {
+    "name": "Honeycomb",
+    "portions": "small slab",
+    "time": 15,
+    "link": "https://github.com/norwayinmay/food/blob/main/sweet/honeycomb.pdf",
+    "diet": ["V", "sweet"]
+  },
+  {
     "name": "Crunchy ginger biscuits",
     "portions": "12 biscuits",
     "time": 25,
