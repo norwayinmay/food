@@ -377,5 +377,12 @@
     "time": 25,
     "link": "https://github.com/norwayinmay/food/blob/main/sweet/crunchy-ginger-biscuits.pdf",
     "diet": ["V", "sweet"]
+  },
+  {
+    "name": "Cinnamon sugar",
+    "portions": "some",
+    "time": 3,
+    "link": "https://github.com/norwayinmay/food/blob/main/sweet/cinnamon-sugar.pdf",
+    "diet": ["V", "VG", "sweet"]
   }
 ]
