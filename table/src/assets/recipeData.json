@@ -306,6 +306,13 @@
     "diet": ["V", "savoury"]
   },
   {
+    "name": "Tuna pasta",
+    "portions": "1",
+    "time": 10,
+    "link": "https://github.com/norwayinmay/food/blob/main/savoury/cold-tuna-pasta.pdf",
+    "diet": ["savoury"]
+  },
+  {
     "name": "Chocolate cheesecake",
     "portions": "4",
     "time": 60,
