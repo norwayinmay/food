@@ -176,6 +176,13 @@
     "keywords": ["soup"]
   },
   {
+    "name": "Brussel sprout pakoras",
+    "portions": "40 small pakoras",
+    "time": 120,
+    "link": "https://github.com/norwayinmay/food/blob/main/savoury/brussel-sprout-pakoras.pdf",
+    "diet": ["V", "VG", "GF", "savoury"]
+  },
+  {
     "name": "Moussaka-style mince",
     "portions": "8",
     "time": 75,
