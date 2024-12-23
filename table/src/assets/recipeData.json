@@ -16,6 +16,13 @@
     "fibre": 23
   },
   {
+    "name": "Harissa chicken thighs",
+    "portions": "3",
+    "time": 35,
+    "link": "https://github.com/norwayinmay/food/blob/main/savoury/harissa chicken thighs.pdf",
+    "diet": ["savoury"]
+  },
+  {
     "name": "Cajun chicken breast",
     "portions": "4 (2x2)",
     "time": 35,
