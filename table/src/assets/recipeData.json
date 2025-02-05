@@ -258,6 +258,13 @@
     "keywords": ["tomato", "sauce"]
   },
   {
+    "name": "Slow cooker lemon chicken pasta",
+    "portions": "3",
+    "time": 165,
+    "link": "https://github.com/norwayinmay/food/blob/main/savoury/slow-cooker-chicken-pasta.pdf",
+    "diet": ["savoury"]
+  },
+  {
     "name": "Stir fry",
     "portions": "2",
     "time": 30,
