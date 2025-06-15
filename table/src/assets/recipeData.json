@@ -65,6 +65,14 @@
     "keywords": ["curry", "cupboard"]
   },
   {
+    "name": "Ras-el-hanout chicken pot",
+    "portions": "4",
+    "time": 50,
+    "link": "https://github.com/norwayinmay/food/blob/main/savoury/ras-el-hanout-chicken-pot.pdf",
+    "diet": ["savoury"],
+    "keywords": ["cupboard"]
+  },
+  {
     "name": "Chilli chicken sauce",
     "portions": "6",
     "time": 90,
@@ -262,6 +270,13 @@
     "portions": "3",
     "time": 165,
     "link": "https://github.com/norwayinmay/food/blob/main/savoury/slow-cooker-chicken-pasta.pdf",
+    "diet": ["savoury"]
+  },
+  {
+    "name": "Slow cooker paprika veg",
+    "portions": "4",
+    "time": 30,
+    "link": "https://github.com/norwayinmay/food/blob/main/savoury/slow-cooker-paprika-veg.pdf",
     "diet": ["savoury"]
   },
   {
