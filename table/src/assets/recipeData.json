@@ -429,6 +429,13 @@
     "diet": ["V", "sweet"]
   },
   {
+    "name": "Granola bars",
+    "portions": "10 slices",
+    "time": 40,
+    "link": "https://github.com/norwayinmay/food/blob/main/sweet/granola-bars.pdf",
+    "diet": ["V", "sweet"]
+  },
+  {
     "name": "Cinnamon sugar",
     "portions": "some",
     "time": 3,
