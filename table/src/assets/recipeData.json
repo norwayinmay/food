@@ -228,6 +228,13 @@
     "keywords": ["tomato", "sauce"]
   },
   {
+    "name": "Rice wine chicken",
+    "portions": "4",
+    "time": 45,
+    "link": "https://github.com/norwayinmay/food/blob/main/savoury/rice-wine-chicken.pdf",
+    "diet": ["GF", "savoury"]
+  },
+  {
     "name": "Roast veg pasta sauce",
     "portions": "6",
     "time": 90,
