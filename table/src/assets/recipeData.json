@@ -8,6 +8,13 @@
     "keywords": ["tomato"]
   },
   {
+    "name": "Bibimbap (ish)",
+    "portions": "2",
+    "time": 50,
+    "link": "https://github.com/norwayinmay/food/blob/main/savoury/bibimbap-ish.pdf",
+    "diet": ["savoury"]
+  },
+  {
     "name": "Butternut squash & lentils",
     "portions": "5",
     "time": 50,
