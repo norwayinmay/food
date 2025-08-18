@@ -228,6 +228,13 @@
     "keywords": ["tomato", "sauce"]
   },
   {
+    "name": "Fuzhou rice wine",
+    "portions": "25",
+    "time": 70000,
+    "link": "https://github.com/norwayinmay/food/blob/main/savoury/fuzhou-rice-wine.pdf",
+    "diet": ["GF", "savoury"]
+  },
+  {
     "name": "Rice wine chicken",
     "portions": "4",
     "time": 45,
