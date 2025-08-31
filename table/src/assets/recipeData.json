@@ -228,8 +228,8 @@
   },
   {
     "name": "Red chicken pot",
-    "portions": "4",
-    "time": 105,
+    "portions": "6",
+    "time": 120,
     "link": "https://github.com/norwayinmay/food/blob/main/savoury/red-chicken.pdf",
     "diet": ["GF", "savoury"],
     "keywords": ["tomato", "sauce"]
