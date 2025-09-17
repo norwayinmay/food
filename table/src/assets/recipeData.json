@@ -391,6 +391,13 @@
     "diet": ["V", "sweet"]
   },
   {
+    "name": "Chocolate orange shortbread",
+    "portions": "14 cookies",
+    "time": 120,
+    "link": "https://github.com/norwayinmay/food/blob/main/sweet/chocolate-orange-shortbread.pdf",
+    "diet": ["V", "sweet"]
+  },
+  {
     "name": "Coconut macaroons",
     "portions": "6",
     "time": 35,
