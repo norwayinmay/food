@@ -370,6 +370,13 @@
     "diet": ["savoury"]
   },
   {
+    "name": "Green cherry tomato chutney",
+    "portions": "1 jar",
+    "time": 360,
+    "link": "https://github.com/norwayinmay/food/blob/main/savoury/green-tomato-chutney.pdf",
+    "diet": ["V"]
+  },
+  {
     "name": "Chocolate cheesecake",
     "portions": "4",
     "time": 60,
