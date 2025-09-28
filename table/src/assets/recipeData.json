@@ -236,7 +236,7 @@
   },
   {
     "name": "Fuzhou rice wine",
-    "portions": "25",
+    "portions": "20",
     "time": 70000,
     "link": "https://github.com/norwayinmay/food/blob/main/savoury/fuzhou-rice-wine.pdf",
     "diet": ["GF", "savoury"]
