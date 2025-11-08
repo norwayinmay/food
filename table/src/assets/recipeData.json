@@ -257,6 +257,14 @@
     "keywords": ["tomato", "sauce"]
   },
   {
+    "name": "Chicken & veg pasta sauce",
+    "portions": "8-10",
+    "time": 90,
+    "link": "https://github.com/norwayinmay/food/blob/main/savoury/chicken-veg-pasta-sauce.pdf",
+    "diet": ["GF", "savoury"],
+    "keywords": ["tomato", "sauce"]
+  },
+  {
     "name": "Pesto chicken pasta",
     "portions": "2",
     "time": 35,
