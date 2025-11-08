@@ -474,7 +474,7 @@
   {
     "name": "Granola bars",
     "portions": "10 slices",
-    "time": 40,
+    "time": 45,
     "link": "https://github.com/norwayinmay/food/blob/main/sweet/granola-bars.pdf",
     "diet": ["V", "sweet"]
   },
@@ -484,5 +484,12 @@
     "time": 3,
     "link": "https://github.com/norwayinmay/food/blob/main/sweet/cinnamon-sugar.pdf",
     "diet": ["V", "VG", "sweet"]
+  },
+  {
+    "name": "Peppermint creams",
+    "portions": "25-30 creams",
+    "time": 285,
+    "link": "https://github.com/norwayinmay/food/blob/main/sweet/peppermint-creams.pdf",
+    "diet": ["V", "sweet"]
   }
 ]
