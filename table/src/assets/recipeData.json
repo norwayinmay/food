@@ -491,5 +491,12 @@
     "time": 295,
     "link": "https://github.com/norwayinmay/food/blob/main/sweet/peppermint-creams.pdf",
     "diet": ["V", "sweet"]
+  },
+  {
+    "name": "Mince pie",
+    "portions": "4 quarters of pie",
+    "time": 30,
+    "link": "https://github.com/norwayinmay/food/blob/main/sweet/sneaky-mince-pie.pdf",
+    "diet": ["V", "sweet"]
   }
 ]
